@@ -30,8 +30,7 @@ int main()
 	}
 	else
 	{
-		cout << "Error...\n\n";
-		errorHandler();
+		cout << "Error Invalid Input..." << endl;
 	}
 
 	cin.get();
@@ -53,28 +52,4 @@ int c2f(int n)
 	cout << n << "C is " << finalNum << "F." << endl;
 
 	return finalNum;
-}
-
-void errorHandler()
-{
-	int errorInput;
-	int convertNum;
-	cout << "Please enter a VALID number, 1 for F to C & 2 for C to F: ";
-	cin >> errorInput;
-
-	cout << "Input number to convert: ";
-	cin >> convertNum;
-
-	if(errorInput == 1)
-	{
-		f2c(convertNum);
-	}
-	else if(errorInput == 2)
-	{
-		c2f(convertNum);
-	}
-	else
-	{
-		errorHandler();
-	}
 }
